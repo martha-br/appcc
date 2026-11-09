@@ -9,6 +9,8 @@ require __DIR__ . '/../../includes/header.php';
 
 <h1 class="h3 mb-3">Equipos</h1>
 
+<a href="crear.php" class="btn btn-primary mb-3">Nuevo equipo</a>
+
 <?php if (!$equipos): ?>
     <div class="alert alert-info">Todavía no hay equipos registrados.</div>
 <?php else: ?>
