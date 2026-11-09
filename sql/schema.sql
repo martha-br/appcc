@@ -7,6 +7,7 @@ CREATE TABLE equipos (
     nombre VARCHAR(100) NOT NULL,
     ubicacion VARCHAR(100),
     temp_min DECIMAL(5,2) NOT NULL
+    temp_max DECIMAL(5,2) NOT NULL
 );
 
 CREATE TABLE registros_temperatura (
