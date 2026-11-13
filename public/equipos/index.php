@@ -21,19 +21,23 @@ require __DIR__ . '/../../includes/header.php';
                 <th>Ubicación</th>
                 <th>Temp. mínima (ºC)</th>
                 <th>Temp. máxima (ºC)</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($equipos as $equipo): ?>
                 <tr>
-                    <td><?=  htmlspecialchars($equipo['nombre']) ?></td>
-                    <td><?=  htmlspecialchars($equipo['ubicacion']) ?></td>
+                    <td><?= htmlspecialchars($equipo['nombre']) ?></td>
+                    <td><?= htmlspecialchars($equipo['ubicacion'] ?? '') ?></td>
                     <td><?= $equipo['temp_min'] ?></td>
                     <td><?= $equipo['temp_max'] ?></td>
+                    <td>
+                        <a href="editar.php?id=<?= (int)$equipo['id'] ?>" class="btn btn-sm btn-outline-primary">Editar</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-    <?php endif; ?>
+<?php endif; ?>
 
-    <?php require __DIR__ . '/../../includes/footer.php'; ?>
+<?php require __DIR__ . '/../../includes/footer.php'; ?>
