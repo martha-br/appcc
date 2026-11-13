@@ -18,6 +18,32 @@ Aplicación web para el **registro digital de temperaturas** de equipos de frío
 - HTML, CSS y Bootstrap 5
 - Git y GitHub
 
+## Modelo de datos
+
+```mermaid
+erDiagram
+    EQUIPOS ||--o{ REGISTROS_TEMPERATURA : "tiene"
+
+    EQUIPOS {
+        int id PK
+        varchar nombre
+        varchar ubicacion
+        decimal temp_min
+        decimal temp_max
+    }
+
+    REGISTROS_TEMPERATURA {
+        int id PK
+        int equipo_id FK
+        decimal temperatura
+        datetime fecha_hora
+        varchar operario
+        varchar observaciones
+    }
+```
+
+Un equipo puede tener muchos registros de temperatura, y cada registro pertenece a un único equipo. La clave foránea `equipo_id` usa `ON DELETE RESTRICT`: no se puede eliminar un equipo que tenga registros, para conservar el historial.
+
 ## Capturas
 
 ![Listado de equipos](docs/img/equipos.png)
@@ -27,6 +53,8 @@ Aplicación web para el **registro digital de temperaturas** de equipos de frío
 ![Formulario con aviso de temperatura fuera de rango](docs/img/registro_error.png)
 
 ![Filtros aplicados](docs/img/filtros.png)
+
+![Modelo de datos](docs/img/modelo_datos.png)
 
 ## Instalación en local
 
