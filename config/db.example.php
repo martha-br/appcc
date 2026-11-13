@@ -1,4 +1,7 @@
 <?php
+
+date_default_timezone_set('Europe/Madrid');
+
 $host = 'localhost';
 $db = 'appcc';
 $user = 'TU_USUARIO';

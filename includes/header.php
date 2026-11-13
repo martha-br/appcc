@@ -9,9 +9,13 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
         <div class="container">
             <a class="navbar-brand" href="/appcc/public/equipos/index.php">APPCC Digital</a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="/appcc/public/equipos/index.php">Equipos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/appcc/public/registros/index.php">Registros</a></li>
+            </ul>
         </div>
     </nav>
     <main class="container">
