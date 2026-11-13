@@ -21,8 +21,11 @@ Aplicación web para el **registro digital de temperaturas** de equipos de frío
 ## Capturas
 
 ![Listado de equipos](docs/img/equipos.png)
+
 ![Registros](docs/img/registros.png)
-![Registros con alertas](docs/img/registro_error.png)
+
+![Formulario con aviso de temperatura fuera de rango](docs/img/registro_error.png)
+
 ![Filtros aplicados](docs/img/filtros.png)
 
 ## Instalación en local
